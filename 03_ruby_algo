@@ -1,0 +1,37 @@
+# 1から引数numberの値までの値を順番に、以下の条件に基づいた出力を返すchapter02_01メソッドを定義してください。
+#- 3の倍数の場合は、「"Fizz!"」を返す
+#- 5の倍数の場合は、「"Buzz!"」を返す
+#- 15の倍数の場合は、「"FizzBuzz!"」を返す
+#- 上記以外の場合は、値そのものを返す
+def chapter02_01(number)
+  # コードを記載
+  (1..number).each do |num|
+    if num % 15 == 0
+      p "FizzBuzz!"
+    elsif num % 3 == 0
+      p "Fizz!"
+    elsif num % 5 == 0
+      p "Buzz!"
+    else
+      p num
+    end
+  end
+end
+chapter02_01(20)
+
+# 解答例
+def chapter02_01(number)
+  number.times do |num|
+    n = num + 1
+    if n % 3 == 0 && n % 5 == 0
+      puts '"FizzBuzz!"'
+    elsif n % 3 == 0
+      puts '"Fizz!"'
+    elsif n % 5 == 0
+      puts '"Buzz!"'
+    else
+      puts n
+    end
+  end
+end
+chapter02_01(20)
